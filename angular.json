@@ -124,6 +124,41 @@
           }
         }
       }
+    },
+    "ngx-scroll-sync": {
+      "projectType": "library",
+      "root": "projects/ngx-scroll-sync",
+      "sourceRoot": "projects/ngx-scroll-sync/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-scroll-sync/tsconfig.lib.json",
+            "project": "projects/ngx-scroll-sync/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-scroll-sync/src/test.ts",
+            "tsConfig": "projects/ngx-scroll-sync/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-scroll-sync/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-scroll-sync/tsconfig.lib.json",
+              "projects/ngx-scroll-sync/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "angular-npm-projects"
 }

@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngx-scroll-sync": [
+        "dist/ngx-scroll-sync"
+      ],
+      "ngx-scroll-sync/*": [
+        "dist/ngx-scroll-sync/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
